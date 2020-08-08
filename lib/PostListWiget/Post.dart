@@ -219,4 +219,60 @@ class _PostsState extends State<Posts> {
       ),
     );
   }
+  //navigate to view house
+  Route createRoute(){
+    return PageRouteBuilder(
+        pageBuilder: (context,animation,secanim)=>RoutePage(post: widget.posts),
+        transitionsBuilder: (context,animation,secanim,child){
+          var curve=Curves.easeOut;
+          var begin=Offset(0.0,1.0);
+          var end =Offset.zero;
+          var tween=Tween(begin: begin,end: end);
+          var curvedAnimation=CurvedAnimation(
+            parent: animation,
+            curve: curve,
+          );
+          return SlideTransition(
+            position: tween.animate(curvedAnimation),
+            child: child,
+          );
+        }
+    );
+  }
 }
+class RoutePage extends StatefulWidget {
+  PostModel post;
+  RoutePage({this.post});
+  @override
+  _RoutePageState createState() => _RoutePageState();
+}
+
+class _RoutePageState extends State<RoutePage> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: NestedScrollView(
+        headerSliverBuilder: (context,b){
+          return <Widget>[
+            SliverAppBar(
+              expandedHeight: 200,
+              floating: false,
+              pinned: true,
+              flexibleSpace: FlexibleSpaceBar(
+                centerTitle: true,
+                background: Image(
+                  image: widget.post.houseimage[1],
+                  fit: BoxFit.cover,
+                ),
+              ),
+            )
+          ];
+        },
+        body: Center(
+
+        ),
+      ),
+    );
+  }
+}
+
