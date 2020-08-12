@@ -6,21 +6,19 @@ import 'package:flutter/material.dart';
 class HomeScreen extends StatefulWidget {
   //List of asset image for sample
   static List<AssetImage> houseImagetoPosts=[
-    AssetImage("assets/bernard-hermant-c4Ccpa8sMlI-unsplash .jpg"),
+    AssetImage("assets/selfcon.jpeg"),
     AssetImage("assets/flat.jpeg"),
     AssetImage("assets/hoste.jpeg"),
-    AssetImage("hostel.jpeg"),
-    AssetImage("selfcon.jpeg"),
   ];
 
   //List of post,each of this posts items contains list of images above
   List<PostModel> posts=[
-    PostModel(houseImagetoPosts,20000,"Oye","Available","A selcon,tiled, very spacious is available at oye"),
-    PostModel(houseImagetoPosts,50000,"Oye","Booked","A selcon,tiled, very spacious is available at oye"),
-    PostModel(houseImagetoPosts,10000,"Oye","Available","A selcon,tiled, very spacious is available at oye"),
-    PostModel(houseImagetoPosts,50000,"Oye","Booked","A selcon,tiled, very spacious is available at oye"),
-    PostModel(houseImagetoPosts,20000,"Oye","Available","A selcon,tiled, very spacious is available at oye"),
-    PostModel(houseImagetoPosts,80000,"Oye","Available","A selcon,tiled, very spacious is available at oye"),
+    PostModel(houseImagetoPosts,20000,"Oye","Available","A selcon,tiled, very spacious is available at oye,location ikole ekity oye,very spacious can contain two or more people together click the blue button bellow to get the house","SELFCON"),
+    PostModel(houseImagetoPosts,50000,"Oye","Booked","A selcon,tiled, very spacious is available at oye,location ikole ekity oye,very spacious can contain two or more people together click the blue button bellow to get the house","FLAT"),
+    PostModel(houseImagetoPosts,10000,"Oye","Available","A selcon,tiled, very spacious is available at oye,location ikole ekity oye,very spacious can contain two or more people together click the blue button bellow to get the house","FLAT"),
+    PostModel(houseImagetoPosts,50000,"Oye","Booked","A selcon,tiled, very spacious is available at oye,location ikole ekity oye,very spacious can contain two or more people together click the blue button bellow to get the house","SELFCON"),
+    PostModel(houseImagetoPosts,20000,"Oye","Available","A selcon,tiled, very spacious is available at oye,location ikole ekity oye,very spacious can contain two or more people together click the blue button bellow to get the house","SINGLE ROOM"),
+    PostModel(houseImagetoPosts,80000,"Oye","Available","A selcon,tiled, very spacious is available at oye,location ikole ekity oye,very spacious can contain two or more people together click the blue button bellow to get the house","SINGLE ROOM"),
   ];
   @override
   _HomeScreenState createState() => _HomeScreenState();

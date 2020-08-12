@@ -11,11 +11,13 @@ class PostModel{
   String location;
   String state;
   String description;
-  PostModel(List<AssetImage> housephoto, int price,String location,String state,String disc){
+  String type;
+  PostModel(List<AssetImage> housephoto, int price,String location,String state,String disc,String type){
     this.houseimage=housephoto;
    this.price=price;
    this.location=location;
    this.state=state;
    this.description=disc;
+   this.type=type;
   }
 }
